@@ -1,0 +1,269 @@
+/* ============================================= */
+/* DASHBOARD - ESTILOS EXCLUSIVOS */
+/* ============================================= */
+
+body.dashboard-page {
+    display: block;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 280px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sidebar-logo .logo-linha1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #000;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.sidebar-logo .logo-linha2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #000;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.nav-item.active {
+    background-color: #000;
+    color: white;
+}
+
+.nav-icon {
+    font-size: 1.3em;
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.sidebar-logout {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.sidebar-logout:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
+    margin-left: 280px;
+    flex: 1;
+    padding: 40px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.content-header {
+    margin-bottom: 30px;
+}
+
+.content-header h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.content-header .subtitle {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.new-post-section {
+    margin-bottom: 30px;
+}
+
+.btn-new-post {
+    padding: 12px 30px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-new-post:hover {
+    background-color: #333;
+    transform: scale(105%);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.post-time {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+}
+
+.post-content {
+    padding: 15px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #555;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-header h1 {
+        font-size: 2em;
+    }
+}

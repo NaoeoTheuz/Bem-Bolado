@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Bolado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading enquanto verifica -->
+    <div class="loading-container" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <!-- CONTEÚDO DE LOGIN (só aparece se já aceitou os termos) -->
+    <div class="container" id="conteudoLogin" style="display: none;">
+        <div class="logo-container">
+            <img src="foto_logo.jpg" alt="Bem Bolado" class="logo-imagem">
+        </div>
+        
+        <div class="buttons">
+            <button id="criarContaBtn" class="btn btn-primary">CRIE UMA CONTA</button>
+            <button id="temContaBtn" class="btn btn-secondary">JÁ TEM UMA CONTA?</button>
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="digite o email...">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="digite a senha...">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
+                <div class="modal-links">
+                    <a href="#" id="esqueciSenha">ESQUECEU A SENHA?</a>
+                    <a href="#" id="criarContaModal">CRIE UMA CONTA</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Torne-se um BOLADO!</h2>
+            <h3>Crie uma Conta</h3>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="nomeCompleto">Nome Completo</label>
+                    <input type="text" id="nomeCompleto" placeholder="digite o nome completo...">
+                </div>
+                <div class="form-group">
+                    <label for="emailRegistro">Email</label>
+                    <input type="email" id="emailRegistro" placeholder="digite o email...">
+                </div>
+                <div class="form-group">
+                    <label for="senhaRegistro">Senha</label>
+                    <input type="password" id="senhaRegistro" placeholder="digite a senha...">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="digite seu CPF...">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">CRIAR</button>
+                <div class="modal-links">
+                    <a href="#" id="jaTemConta">JÁ TEM UMA CONTA?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Recuperar Senha -->
+    <div id="forgotModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Recuperar Senha</h2>
+            <form id="forgotForm">
+                <div class="form-group">
+                    <label for="emailForgot">Email</label>
+                    <input type="email" id="emailForgot" placeholder="digite seu email...">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">ENVIAR</button>
+                <div class="modal-links">
+                    <a href="#" id="voltarLogin">VOLTAR AO LOGIN</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Verifica se o usuário já aceitou os termos
+        document.addEventListener('DOMContentLoaded', function() {
+            const termosAceitos = sessionStorage.getItem('termosAceitos');
+            
+            if (!termosAceitos) {
+                // Se não aceitou, redireciona para termos.html
+                window.location.href = 'termos.html';
+            } else {
+                // Se aceitou, mostra o conteúdo de login
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('conteudoLogin').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

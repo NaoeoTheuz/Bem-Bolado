@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Bolado - Termos de Uso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .termos-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Logo - mesma do index */
+        .logo-container {
+            margin-bottom: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .data-atualizacao {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .termos-conteudo {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #eaeef2;
+        }
+
+        .termos-conteudo h2 {
+            color: #000000;
+            font-size: 1.3em;
+            margin: 20px 0 10px;
+            font-weight: 700;
+        }
+
+        .termos-conteudo h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .termos-conteudo p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .termos-conteudo ul {
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+
+        .termos-conteudo li {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        /* Checkbox - estilo personalizado */
+        .termos-aceite {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #eaeef2;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            accent-color: #000000;
+        }
+
+        /* Botão - mesmo estilo do site */
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn-continuar {
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            width: 100%;
+            max-width: 350px;
+            background-color: #000000;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-continuar:hover:not(:disabled) {
+            background-color: #333333;
+            transform: scale(105%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-continuar:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #999999;
+        }
+
+        .btn-continuar:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Scroll personalizado */
+        .termos-conteudo::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .termos-conteudo::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .termos-conteudo::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .termos-conteudo::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .termos-container {
+                padding: 20px;
+            }
+
+            .logo-img {
+                max-height: 150px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .btn-continuar {
+                padding: 15px 30px;
+                font-size: 1.1em;
+                max-width: 300px;
+            }
+
+            .termos-conteudo {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="termos-container">
+        <!-- LOGO - mesma do index -->
+        <div class="logo-container">
+            <img src="foto_logo.jpg" alt="Bem Bolado" class="logo-img">
+        </div>
+
+        <h1>Termos de Uso</h1>
+        <div class="data-atualizacao">Última atualização: 27 de fevereiro de 2025</div>
+
+        <hr>
+
+        <div class="termos-conteudo">
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar e usar o Bem Bolado, você concorda em cumprir estes termos. Se não concordar, não use nossa plataforma.</p>
+
+            <h2>2. Cadastro e Conta</h2>
+            <p>Para usar nossa plataforma, você precisa criar uma conta fornecendo informações verdadeiras e atualizadas. Você é responsável por:</p>
+            <ul>
+                <li>Manter a confidencialidade de sua conta e senha</li>
+                <li>Todas as atividades que ocorrerem em sua conta</li>
+                <li>Notificar imediatamente sobre qualquer uso não autorizado</li>
+            </ul>
+
+            <h2>3. Trocas e Anúncios</h2>
+            <p>O Bem Bolado é uma plataforma que conecta pessoas interessadas em trocar roupas e acessórios. É importante entender que:</p>
+            <ul>
+                <li>As trocas são de inteira responsabilidade dos usuários envolvidos</li>
+                <li>Anúncios devem conter informações verdadeiras e precisas</li>
+                <li>Fotos devem ser reais e representar fielmente o produto</li>
+                <li>Não nos responsabilizamos por desacordos nas trocas</li>
+            </ul>
+
+            <h2>4. Conduta do Usuário</h2>
+            <p>Ao usar nossa plataforma, você concorda em:</p>
+            <ul>
+                <li>Respeitar todos os usuários</li>
+                <li>Não publicar conteúdo ofensivo, discriminatório ou ilegal</li>
+                <li>Não violar direitos de terceiros</li>
+                <li>Não usar a plataforma para fins ilegais</li>
+                <li>Não enviar spam ou mensagens não solicitadas</li>
+            </ul>
+
+            <h2>5. Privacidade</h2>
+            <p>Seus dados são protegidos conforme nossa Política de Privacidade. Não compartilhamos informações pessoais sem seu consentimento, exceto quando exigido por lei.</p>
+
+            <h2>6. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo da plataforma (logos, designs, textos) é propriedade do Bem Bolado. Você não pode copiar, modificar ou distribuir sem autorização.</p>
+
+            <h2>7. Modificações dos Termos</h2>
+            <p>Podemos alterar estes termos a qualquer momento. O uso contínuo da plataforma após alterações constitui aceitação dos novos termos.</p>
+
+            <h2>8. Limitação de Responsabilidade</h2>
+            <p>O Bem Bolado não se responsabiliza por:</p>
+            <ul>
+                <li>Problemas em trocas entre usuários</li>
+                <li>Danos ou perdas decorrentes do uso da plataforma</li>
+                <li>Conteúdo publicado por usuários</li>
+                <li>Interrupções temporárias do serviço</li>
+            </ul>
+
+            <h2>9. Cancelamento de Conta</h2>
+            <p>Podemos suspender ou cancelar contas que violem estes termos. Você também pode cancelar sua conta a qualquer momento entrando em contato conosco.</p>
+
+            <h2>10. Contato</h2>
+            <p>Dúvidas sobre estes termos? Entre em contato:</p>
+            <ul>
+                <li>Email: BemBoladoSuporte@gmail.com</li>
+                <li>Instagram: @BemBolado</li>
+            </ul>
+        </div>
+
+        <div class="termos-aceite">
+            <label class="checkbox-container">
+                <input type="checkbox" id="aceitarTermos">
+                <span>Li e aceito todos os Termos de Uso</span>
+            </label>
+        </div>
+
+        <div class="btn-container">
+            <button id="continuarBtn" class="btn-continuar" disabled>ACEITAR E CONTINUAR</button>
+        </div>
+    </div>
+
+    <script>
+        // Elementos
+        const aceitarCheckbox = document.getElementById('aceitarTermos');
+        const continuarBtn = document.getElementById('continuarBtn');
+
+        // Habilitar/desabilitar botão baseado no checkbox
+        aceitarCheckbox.addEventListener('change', function() {
+            continuarBtn.disabled = !this.checked;
+        });
+
+        // Redirecionar para o index.html ao clicar no botão
+        continuarBtn.addEventListener('click', () => {
+            if (!continuarBtn.disabled) {
+                // Salva flag indicando que os termos foram aceitos
+                sessionStorage.setItem('termosAceitos', 'true');
+                // Redireciona para o login
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

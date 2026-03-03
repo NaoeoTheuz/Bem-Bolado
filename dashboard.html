@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Bolado - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <!-- MENU LATERAL ESQUERDO -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <div class="logo-linha1">BEM</div>
+                    <div class="logo-linha2">BOLADO</div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📰</span>
+                    <span>Feed</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Seguindo</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">❤️</span>
+                    <span>Curtidos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">💾</span>
+                    <span>Salvos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="sidebar-logout">Sair</button>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Segundos</h1>
+                <p class="subtitle">Postagens de quem você curte.</p>
+            </header>
+
+            <!-- BOTÃO NOVA PUBLICAÇÃO -->
+            <div class="new-post-section">
+                <button id="novaPublicacaoBtn" class="btn-new-post">NOVA PUBLICAÇÃO</button>
+            </div>
+
+            <!-- GRADE DE POSTAGENS -->
+            <div class="posts-grid">
+                <!-- Postagem 1 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="foto_logo.jpg" alt="Avatar" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Usuário Exemplo</h4>
+                            <span class="post-time">@usuario • 2h</span>
+                        </div>
+                    </div>
+                    <div class="post-image" style="background-color: #e0e0e0;"></div>
+                    <div class="post-content">
+                        <p>Descrição da postagem aqui...</p>
+                    </div>
+                    <div class="post-stats">
+                        <span>❤️ 123 curtidas</span>
+                        <span>💬 45 comentários</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Compartilhar</button>
+                    </div>
+                </div>
+
+                <!-- Postagem 2 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="foto_logo.jpg" alt="Avatar" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Outro Usuário</h4>
+                            <span class="post-time">@outro • 5h</span>
+                        </div>
+                    </div>
+                    <div class="post-image" style="background-color: #d0d0d0;"></div>
+                    <div class="post-content">
+                        <p>Outra postagem interessante...</p>
+                    </div>
+                    <div class="post-stats">
+                        <span>❤️ 89 curtidas</span>
+                        <span>💬 23 comentários</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Compartilhar</button>
+                    </div>
+                </div>
+
+                <!-- Postagem 3 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <img src="foto_logo.jpg" alt="Avatar" class="post-avatar">
+                        <div class="post-info">
+                            <h4>Maria Silva</h4>
+                            <span class="post-time">@maria • 8h</span>
+                        </div>
+                    </div>
+                    <div class="post-image" style="background-color: #c0c0c0;"></div>
+                    <div class="post-content">
+                        <p>Look do dia! 😍</p>
+                    </div>
+                    <div class="post-stats">
+                        <span>❤️ 234 curtidas</span>
+                        <span>💬 67 comentários</span>
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Compartilhar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
